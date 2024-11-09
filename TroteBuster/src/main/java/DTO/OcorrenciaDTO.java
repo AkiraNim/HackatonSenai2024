@@ -1,8 +1,15 @@
 package DTO;
 
+import java.sql.Date;
+import java.sql.Time;
+import java.time.LocalDateTime;
+
 public class OcorrenciaDTO {
-    private String ocorrencia;
+    private String ocorrencia, telefone;
     private int id, id_user, id_tel;
+    private Date data;
+    private Time hora;
+    
 
     public OcorrenciaDTO(int id, String ocorrencia, int id_user, int id_tel) {
         this.id = id;
@@ -11,6 +18,13 @@ public class OcorrenciaDTO {
         this.id_tel = id_tel;
     }
 
+    public OcorrenciaDTO(String telefone, String ocorrencia,  Date data, Time hora) {
+        this.ocorrencia = ocorrencia;
+        this.data = data;
+        this.hora = hora;
+        this.telefone = telefone;
+    }
+    
     public String getOcorrencia() {
         return ocorrencia;
     }
