@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1080.0" maxWidth="1920.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: f3f8ff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="registerController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1365.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#082277" height="768.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="85.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Button fx:id="home" layoutX="6.0" layoutY="90.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="49.0" prefWidth="39.0" style="-fx-background-color: none;">
+         <graphic>
+            <ImageView fitHeight="120.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="register" contentDisplay="TOP" layoutX="7.0" layoutY="172.0" mnemonicParsing="false" onAction="#goToRegister" style="-fx-background-color: none;">
+         <graphic>
+            <ImageView fitHeight="120.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/register.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="query" layoutX="4.0" layoutY="257.0" mnemonicParsing="false" onAction="#goToQuery" prefHeight="83.0" prefWidth="82.0" style="-fx-background-color: none;">
+         <graphic>
+            <ImageView fitHeight="75.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/query.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="occurence" layoutX="7.0" layoutY="349.0" mnemonicParsing="false" onAction="#goToOccurence" style="-fx-background-color: none;">
+         <graphic>
+            <ImageView fitHeight="78.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/occurence.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="report" layoutX="6.0" layoutY="428.0" mnemonicParsing="false" onAction="#goToReport" style="-fx-background-color: none;">
+         <graphic>
+            <ImageView fitHeight="82.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/report.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="logoff" layoutX="1261.0" layoutY="-1.0" mnemonicParsing="false" onAction="#quit" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: none;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <graphic>
+            <ImageView fitHeight="51.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="58.0" fitWidth="52.0" layoutX="21.0" layoutY="680.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Samu192%203.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="hello" layoutX="126.0" layoutY="24.0" />
+      <TextField fx:id="txtNumero" layoutX="159.0" layoutY="172.0" prefHeight="40.0" prefWidth="282.0" />
+      <Label layoutX="159.0" layoutY="116.0" text="Número de telefone">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="159.0" layoutY="228.0" text="Ocorrência">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtOcorrencia" layoutX="159.0" layoutY="299.0" prefHeight="411.0" prefWidth="1092.0" />
+   </children>
+</AnchorPane>
