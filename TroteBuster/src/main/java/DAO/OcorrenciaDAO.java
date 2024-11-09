@@ -53,6 +53,8 @@ public class OcorrenciaDAO {
                 rs.getInt("telefone_id"));
                 
                 ocorrencias.add(ocorrencia);
+                
+                return ocorrencias;
             }
         } catch (SQLException e) {
         }
@@ -60,7 +62,7 @@ public class OcorrenciaDAO {
         return ocorrencias;
     }
     public ArrayList<OcorrenciaDTO> buscarTelefone(String telefone){
-        String sql = "CALL buscar_ocorrencias_por_telefone(?)";
+        String sql = "CALL buscar_ocorrencias_do_dia()";
         
         conn = new ConnectionDAO().connectDB();
         
@@ -87,6 +89,35 @@ public class OcorrenciaDAO {
             }
         } catch (SQLException e) {
         }
+        return null;
+    }
+    public ArrayList<OcorrenciaDTO> buscarTelefonePorDia(){
+        String sql = "CALL buscar_ocorrencias_por_telefone(?)";
+        
+        conn = new ConnectionDAO().connectDB();
+        
+        ArrayList<OcorrenciaDTO> ocorrencias = new ArrayList<>();
+        
+        conn = new ConnectionDAO().connectDB();
+        
+        try {
+            pstm = conn.prepareStatement(sql);
+            rs = pstm.executeQuery();
+            
+            while(rs.next()){
+                OcorrenciaDTO ocorrencia = new OcorrenciaDTO(
+                rs.getInt("id"),
+                rs.getString("descricao"),
+                rs.getInt("usuario_id"),
+                rs.getInt("telefone_id"));
+                
+                ocorrencias.add(ocorrencia);
+                
+                return ocorrencias;
+            }
+        } catch (SQLException e) {
+        }
+        
         return null;
     }
     public static void main(String[] args) {
