@@ -90,7 +90,9 @@ public class OcorrenciaDAO {
         return null;
     }
     public static void main(String[] args) {
-        System.out.println("jorge");
+        OcorrenciaDAO ocorrencia = null;
+        
+        System.out.println(ocorrencia.buscarTelefone("9919"));
         
     }
 }

@@ -26,5 +26,8 @@ public class ConnectionDAO {
         alert.setContentText(message);
         alert.showAndWait();
     }
-
+     
+    public static void main(String[] args) {
+        javafx.application.Application.launch(TestConnection.class);
+    }
 }
