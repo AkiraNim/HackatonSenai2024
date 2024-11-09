@@ -46,12 +46,38 @@ END $$
 
 DELIMITER ;
 
+DELIMITER $$
+
+CREATE OR REPLACE PROCEDURE buscar_ocorrencias_por_telefone(IN telefone_numero VARCHAR(20))
+BEGIN
+    SELECT t.numero, o.descricao, o.dt, o.tp
+    FROM ocorrencias_trote o
+    JOIN telefones t ON o.telefone_id = t.id
+    WHERE t.numero LIKE CONCAT('%', telefone_numero, '%');
+END $$
+
+DELIMITER ;
 
 INSERT INTO telefones (numero) VALUES ('(75) 99199-2950');
+
+INSERT INTO ocorrencias_trote (telefone_id, descricao) VALUES (4, 'Dias de luta e dias de derrota');
 
 SELECT buscar_telefone_id('9919');
 
 SELECT buscar_telefone_id('(75) 99199-2950');
 
-DELETE FROM telefones WHERE id = 1;
+DELETE FROM telefones WHERE id = 3;
+
+SELECT * FROM telefones;
+
+CALL buscar_ocorrencias_por_telefone('99199');
+
+ALTER TABLE ocorrencias_trote DROP data_hora;
+
+ALTER TABLE ocorrencias_trote ADD dt DATE DEFAULT CURRENT_DATE;
+
+ALTER TABLE ocorrencias_trote ADD tp TIME DEFAULT CURRENT_TIME;
+
+
+
 
