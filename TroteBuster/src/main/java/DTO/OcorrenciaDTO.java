@@ -2,7 +2,7 @@ package DTO;
 
 import java.sql.Date;
 import java.sql.Time;
-import java.time.LocalDateTime;
+
 
 public class OcorrenciaDTO {
     private String ocorrencia, telefone;
