@@ -123,7 +123,7 @@ public class OcorrenciaDAO {
     public static void main(String[] args) {
         OcorrenciaDAO ocorrencia = new OcorrenciaDAO();
         
-        System.out.println(ocorrencia.buscarTelefone("9919"));
+        ocorrencia.buscarTelefone("9919");
         
     }
 }
