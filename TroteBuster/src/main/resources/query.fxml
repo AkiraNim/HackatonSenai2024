@@ -85,7 +85,7 @@
       </TableView>
       <ImageView fitHeight="58.0" fitWidth="52.0" layoutX="21.0" layoutY="680.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Samu192%203.png" />
+            <Image url="@../../../img/Samu192%203.png" />
          </image>
       </ImageView>
       <Label fx:id="hello" layoutX="126.0" layoutY="24.0" />
